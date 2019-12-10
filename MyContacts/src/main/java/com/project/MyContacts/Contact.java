@@ -13,4 +13,6 @@ public class Contact {
     @Id @GeneratedValue
     private Long id;
     private @NonNull String name;
+	public void setName(String name2) {
+	}
 }
