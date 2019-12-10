@@ -10,9 +10,14 @@ import javax.persistence.Entity;
 @Data
 @NoArgsConstructor
 public class Contact {
-    @Id @GeneratedValue
+	@Id 
+	@GeneratedValue
     private Long id;
     private @NonNull String name;
-	public void setName(String name2) {
+	public void setName(String name) {
+        this.name = name;
+	}
+	public Object getName() {
+		return name;
 	}
 }

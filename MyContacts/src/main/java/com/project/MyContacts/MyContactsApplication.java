@@ -21,7 +21,7 @@ public class MyContactsApplication {
 					.forEach(name -> {
 						Contact contact = new Contact();
                 		contact.setName(name);
-                		repository.save(contact);
+						repository.save(contact);
 						
         });
             repository.findAll().forEach(System.out::println);
