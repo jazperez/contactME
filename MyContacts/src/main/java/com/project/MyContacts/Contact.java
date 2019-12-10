@@ -14,9 +14,6 @@ public class Contact {
 	@GeneratedValue
     private Long id;
     private @NonNull String name;
-	public void setName(String name) {
-        this.name = name;
-	}
 	public Object getName() {
 		return name;
 	}
