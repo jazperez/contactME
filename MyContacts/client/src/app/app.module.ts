@@ -7,12 +7,15 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HttpClientModule } from '@angular/common/http';
 import { ContactListComponent } from './contact-list/contact-list.component';
 import { MatButtonModule, MatCardModule, MatInputModule, MatListModule, MatToolbarModule } from '@angular/material';
+import { ContactEditComponent } from './contact-edit/contact-edit.component';
+import { FormsModule } from '@angular/forms';
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    ContactListComponent
+    ContactListComponent,
+    ContactEditComponent
   ],
   imports: [
     BrowserModule,
@@ -23,7 +26,8 @@ import { MatButtonModule, MatCardModule, MatInputModule, MatListModule, MatToolb
     MatCardModule,
     MatInputModule,
     MatListModule,
-    MatToolbarModule
+    MatToolbarModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

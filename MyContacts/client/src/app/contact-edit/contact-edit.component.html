@@ -1,0 +1,27 @@
+<mat-card>
+        <form #contactForm="ngForm" (ngSubmit)="save(contactForm.value)">
+            <mat-card-header>
+                <mat-card-title>
+                    <h2>{{contact.name ? 'Edit' : 'Add'}} Contact</h2>
+                </mat-card-title>
+            </mat-card-header>
+            <mat-card-content>
+                <input type="hidden" name="href" [(ngModel)]="contact.href">
+                <mat-form-field>
+                    <input matInput placeholder="Contact Name" [(ngModel)]="contact.name" required name="name" #name>
+                </mat-form-field>
+            </mat-card-content>
+            <mat-card-actions>
+                <button mat-raised-button color="primary" type="submit"
+                    [disabled]="!contactForm.valid">Save</button>
+                <button mat-raised-button color="secondary" (click)="remove(contact.href)"
+                    *ngIf="contact.href" type="button">Delete</button>
+                <a mat-button routerLink="/contact-list">Cancel</a>
+            </mat-card-actions>
+            <mat-card-footer>
+                <div class="giphy">
+                    <img src="{{contact.giphyUrl}}" alt="{{contact.name}}">
+                </div>
+            </mat-card-footer>
+        </form>
+</mat-card>
