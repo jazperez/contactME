@@ -4,8 +4,11 @@
         <mat-list>
             <mat-list-item *ngFor="let contact of contacts">
                 <img mat-list-avatar src="{{contact.giphyUrl}}" alt="{{contact.name}}">
-                <h3 mat-line>{{contact.name}}</h3>
+                <h3 mat-line>
+                    <a mat-button [routerLink]="['/contact-edit', contact.id]">{{contact.name}}</a>
+                </h3>
             </mat-list-item>
         </mat-list>
     </mat-card-content>
+    <button mat-fab color="primary" [routerLink]="['/contact-add']">Add</button>
 </mat-card>
