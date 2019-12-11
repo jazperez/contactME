@@ -1,5 +1,11 @@
-<h2>Contact List</h2>
-
-<div *ngFor="let contact of contacts">
-    {{contact.name}}
-</div>
+<mat-card>
+    <mat-card-title>Contact List</mat-card-title>
+    <mat-card-content>
+        <mat-list>
+            <mat-list-item *ngFor="let contact of contacts">
+                <img mat-list-avatar src="{{contact.giphyUrl}}" alt="{{contact.name}}">
+                <h3 mat-line>{{contact.name}}</h3>
+            </mat-list-item>
+        </mat-list>
+    </mat-card-content>
+</mat-card>
