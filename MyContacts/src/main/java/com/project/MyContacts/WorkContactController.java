@@ -5,6 +5,8 @@ import org.springframework.web.bind.annotation.RestController;
 import java.util.Collection;
 import java.util.stream.Collectors;
 
+import org.springframework.web.bind.annotation.CrossOrigin;
+
 @RestController
 class WorkContactController {
     private final ContactRepository repository;
@@ -14,10 +16,11 @@ class WorkContactController {
     }
 
     @GetMapping("/work-contacts")
+    @CrossOrigin(origins = "http://localhost:4200")
     public Collection<Contact> workContacts() {
         return repository.findAll().stream()
-                .filter(this::isFromWork)
-                .collect(Collectors.toList());
+            .filter(this::isFromWork)
+            .collect(Collectors.toList());
     }
 
     private boolean isFromWork(Contact contact) {

@@ -11,6 +11,6 @@ export class ContactService {
   }
 
   getAll(): Observable<any> {
-    return this.http.get('//localhost:8080/work-contacts');
+    return this.http.get('//localhost:7070/work-contacts');
   }
 }
