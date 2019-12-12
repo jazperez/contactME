@@ -24,9 +24,8 @@ class WorkContactController {
     }
 
     private boolean isFromWork(Contact contact) {
-        return !contact.getName().equals("Carla") &&
-                !contact.getName().equals("David") &&
-                !contact.getName().equals("Elizabeth");
+        return !contact.getName().equals("Elsa") &&
+                !contact.getName().equals("Aladdin");
     }
 
     

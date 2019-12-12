@@ -24,7 +24,7 @@ public class MyContactsApplication {
     @Bean
     ApplicationRunner init(ContactRepository repository) {
         return args -> {
-			Stream.of("Ana", "Beatriz", "Carla", "David", "Elizabeth", "Fredrick")
+			Stream.of("Ana", "Mulan", "Baymax", "Merida", "Elsa", "Hercules", "Peter Pan", "Aladdin")
 					.forEach(name -> {
 						Contact contact = new Contact();
                 		contact.setName(name);

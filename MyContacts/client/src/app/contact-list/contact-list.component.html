@@ -1,5 +1,13 @@
+<style>
+    .contact-list-header {
+        color: #333;
+        display: flex;
+        align-items: center;
+    }
+</style>
+
 <mat-card>
-    <mat-card-title>Contact List</mat-card-title>
+    <h2 class="contact-list-header">All Contacts</h2>
     <mat-card-content>
         <mat-list>
             <mat-list-item *ngFor="let contact of contacts">
@@ -9,6 +17,8 @@
                 </h3>
             </mat-list-item>
         </mat-list>
+        <mat-card-actions>
+                <button mat-raised-button color="primary" [routerLink]="['/contact-add']">Add</button>
+        </mat-card-actions>
     </mat-card-content>
-    <button mat-fab color="primary" [routerLink]="['/contact-add']">Add</button>
 </mat-card>
