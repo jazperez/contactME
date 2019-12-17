@@ -3,6 +3,7 @@ package com.project.MyContacts;
 import org.springframework.boot.ApplicationRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.boot.builder.SpringApplicationBuilder;
 import org.springframework.context.annotation.Bean;
 import java.util.stream.Stream;
 
@@ -49,4 +50,9 @@ public class MyContactsApplication extends SpringBootServletInitializer {
         bean.setOrder(Ordered.HIGHEST_PRECEDENCE);
         return bean;
     }
+    @Override
+    protected SpringApplicationBuilder configure(SpringApplicationBuilder application) {
+        return application.sources(MyContactsApplication.class);
+    }
+
 }
