@@ -4,7 +4,7 @@ import { Observable } from 'rxjs';
 
 @Injectable({providedIn: 'root'})
 export class ContactService {
-  public API = '//localhost:7070';
+  public API = 'https://mycontacts-262302.appspot.com';
   public CONTACT_API = this.API + '/contacts';
 
   constructor(private http: HttpClient) {

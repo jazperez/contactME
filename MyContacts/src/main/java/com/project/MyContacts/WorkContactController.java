@@ -16,7 +16,7 @@ class WorkContactController {
     }
 
     @GetMapping("/work-contacts")
-    @CrossOrigin(origins = "http://localhost:4200")
+    @CrossOrigin(origins = "https://focused-einstein-bfb28f.netlify.com")
     public Collection<Contact> workContacts() {
         return repository.findAll().stream()
             .filter(this::isFromWork)
