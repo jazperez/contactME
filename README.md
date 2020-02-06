@@ -1,5 +1,4 @@
 # MyContacts
-MyContacts: https://focused-einstein-bfb28f.netlify.com/contact-list
 
 # Note: 
 Using Giphy API to match a giphy with contact name.
@@ -13,10 +12,10 @@ MVC Project for COMP 586
 
 * Front-End: Angular.js
 * Back-End: Spring Boot 
-* Third Party Authentication: Okta  [attempted]
+* Third Party Authentication: Okta
 
 ### Requirements
-* Authentication and Authorization: Attempted Authen/Author with Okta unsuccessfully. Left commented code of my atttempts. 
+* Authentication and Authorization
 
 * SPA: Through Angular
 
